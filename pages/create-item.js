@@ -38,7 +38,7 @@ export default function CreateItem() {
     if (!name || !description || !price || !fileUrl) return
     /* first, upload to IPFS */
     const data = JSON.stringify({
-      name, description, image: fileUrl
+      name, description, next/image: fileUrl
     })
     try {
       const added = await client.add(data)
